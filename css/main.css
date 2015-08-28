@@ -1,0 +1,148 @@
+/*
+ *  Markov Composer (Web version) (based on version 0.2.4)
+ * 
+ *  Copyright (C) 2015 - Andrej Budinčević
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+ /* latin */
+ @font-face {
+ 	font-family: 'Roboto';
+ 	font-style: normal;
+ 	font-weight: 300;
+ 	src: local('Roboto Light'), local('Roboto-Light'), url(http://fonts.gstatic.com/s/roboto/v13/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+ 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+ }
+
+ body {
+ 	font-family: "Roboto", "Helvetica", "Arial", "FreeSans", "Verdana", "Tahoma", "Lucida Sans", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
+ 	font-size: 14px;
+ }
+
+ #main {
+ 	height: 100%; 
+ 	width: 100%; 
+ 	top: 0; 
+ 	left: 0; 
+ 	position: absolute; 
+ 	background: #272727;
+ }
+
+ #header {
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	z-index: 3;
+ 	width: 100%;
+ 	height: 40px;
+ 	background: rgba(23,23,23, 0.6);
+ }
+
+ #footer {
+ 	position: absolute;
+ 	bottom: 0;
+ 	left: 0;
+ 	z-index: 3;
+ 	width: 100%;
+ 	height: 40px;
+ 	background: rgba(23,23,23, 0.6);
+ }
+
+ .composition {
+ 	padding: 10px;
+ 	color: #ababab;
+ 	margin-left: 95px;
+ 	background-color: #272727;
+ 	width: 150px;
+ 	text-align: center;
+ }
+
+ .composition .name, .learned .name, .info a:hover, .status .highlight {
+ 	color: #018184;
+ }
+
+ .info a {
+ 	color: #c8c8c8;
+ 	text-decoration: none;
+ }
+
+ .learned {
+ 	top: 0;
+ 	right: 0;
+ 	position: absolute;
+ 	padding: 10px;
+ 	color: #ababab;
+ 	background-color: #272727;
+ 	width: 230px;
+ 	text-align: center;
+ }
+
+ .info {
+ 	bottom: 0;
+ 	right: 0;
+ 	position: absolute;
+ 	padding: 10px;
+ 	color: #ababab;
+ }
+
+ .status {
+ 	bottom: 0;
+ 	left: 0;
+ 	position: absolute;
+ 	padding: 10px;
+ 	color: #ababab;
+ 	background-color: #272727;
+ 	width: 140px;
+ 	text-align: center;
+ }
+
+ .player-button {
+ 	display: block;
+ 	position: relative;
+ 	float: left;
+ 	width: 20px;
+ 	opacity: 0.8;
+ 	cursor: pointer; 
+ 	color: #c8c8c8;
+ 	padding: 5px;
+ 	font-size: 26px !important;
+ 	margin-left: 10px;
+ 	margin-top: 2px;
+ }
+
+ .player-button:hover {
+ 	opacity: 1; 
+ }
+
+ .values {
+ 	padding: 5px;
+ 	width: 35px;
+ 	background: rgba(37,37,37, 0.0);
+ 	border: 0;
+ 	border-left: 2px solid #272727;
+ 	border-right: 2px solid #272727;
+ 	height: 40px;
+ 	color: #ababab;
+ 	text-align: center;
+ 	margin-left: 5px;
+ 	margin-right: 5px;
+ }
+
+ .share {
+ 	display: inline;
+ 	margin-right: 15px;
+ 	font-size: 18px;
+ }
